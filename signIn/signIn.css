@@ -6,13 +6,20 @@
      color: #18293C; */
      font-family: 'inter';
 }
+a{
+     text-decoration: none!important;
+     color: #000;
+}
 body{
      height: 100vh;
      overflow: hidden;
 }
 nav{
      position: absolute;
-     width: 100%;
+     width: 100vw;
+}
+.back{
+     cursor: pointer;
 }
 .redWhite{
      display: grid;
@@ -22,4 +29,174 @@ nav{
 .Advert{
      background-color: #C3002E;
      color: #18293C;
+     padding: 0 65px;
+     padding-top: 230px;
+     position: relative;
+     overflow: hidden;
+}
+.Advert .head{
+     font-size: 48px;
+     font-weight: bold;
+}
+.Advert .para{
+     font-size: 25px;
+     font-weight: 500;
+}
+.signInForm{
+     margin: auto;
+     border: #183F63 1px solid;
+     padding: 50px 40px;
+     border-radius: 20px;
+     width: 450px;
+     height: max-content;
+     display: flex;
+     flex-direction: column;
+     gap: 30px;
+}
+.signInForm h2{
+     font-size: 22px;
+     font-weight: bold;
+     text-align: center;
+}
+.signInForm form{
+     display: flex;
+     flex-direction: column;
+     gap: 30px;
+}
+.signInForm div{
+     display: flex;
+     flex-direction: column;
+     gap: 5px;
+}
+.signInForm label{
+     font-size: 15px;
+     font-weight: 500;
+}
+.signInForm div input{
+     padding: 10px 15px;
+     border: #183F63 1px solid;
+     border-radius: 30px;
+     font-size: 15px;
+     font-weight: 500;
+     outline: none;
+}
+.signInForm span{
+     color: #C3002E;
+}
+.signInForm .option{
+     display: flex!important;
+     flex-direction: row;
+     justify-content: space-between;
+}
+.signInForm .remid{
+     display: flex;
+     flex-direction: row;
+     font-size: 15px;
+     font-weight: 500;
+}
+.forget{
+     color: #C3002E;
+}
+.signInForm button{
+     background-color: #BC012E;
+     color: #fff;
+     cursor: pointer;
+     border: none;
+     outline: none;
+     font-size: 15px;
+     font-weight: bold;
+     border-radius: 30px;
+     padding: 16px 135px;
+     width: max-content;
+     margin: 0 auto;
+}
+.circles1{
+     position: absolute;
+     top: -10%;
+     right: -10%;
+}
+.circle1{
+     width: 240px;
+     height: 240px;
+     rotate: 300deg;
+     border-radius: 100%;
+     z-index: -1;
+     padding: 30px;
+     background: linear-gradient(to right, #1C212C, #5055629f, #1c212c00);
+}
+.circle2{
+     width: 165px;
+     height: 165px;
+     rotate: 360deg;
+     border-radius: 100%;
+     background: linear-gradient(to right, #1C212C, #5055629f, #1c212c00);
+     margin: 0 auto;
+}
+.circles2{
+     position: absolute;
+     bottom: -15%;
+     left: -15%;
+}
+.circles2 .circle1{
+     rotate: 120deg;
+}
+@media (max-width: 768px){
+     body{
+          height: 100vh;
+          overflow: hidden;
+     }
+     .redWhite{
+          display: block;
+          background-color: #C3002E;
+          position: relative;
+     }
+     .Advert{
+          background-color: transparent;
+          padding: 0 50px;
+          padding-top: 150px;
+          padding-right: 100px;
+          position: static;
+     }
+     .Advert .head{
+          font-size: 32px;
+     }
+     .Advert .para{
+          font-size: 20px;
+     }
+     .circles1{
+          top: -10%;
+          right: -20%
+     }
+     .circles2{
+          bottom: -15%;
+          left: -25%;
+     }
+     .signInForm{
+          margin-top: 60px;
+          width: 350px;
+          border: 1px solid #fff;
+          color: #000;
+          padding: 20px;
+     }
+     .signInForm input{
+          border: 1px solid #fff!important;
+          outline: none;
+          background-color: transparent;
+     }
+     .signInForm span{
+          color: #fff;
+     }
+     .forget{
+          color: #000;
+     }
+     .signInForm button{
+          padding: 16px 100px;
+          background-color: #fff;
+          color: #C3002E;
+     }
+     .back{
+          display: block;
+          position: fixed;
+          z-index: 1;
+     }
 }
