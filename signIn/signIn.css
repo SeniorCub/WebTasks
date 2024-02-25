@@ -6,10 +6,6 @@
      color: #18293C; */
      font-family: 'inter';
 }
-a{
-     text-decoration: none!important;
-     color: #000;
-}
 body{
      height: 100vh;
      overflow: hidden;
