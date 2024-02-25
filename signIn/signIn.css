@@ -1,0 +1,25 @@
+*{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     /* color: #C3002E;
+     color: #18293C; */
+     font-family: 'inter';
+}
+body{
+     height: 100vh;
+     overflow: hidden;
+}
+nav{
+     position: absolute;
+     width: 100%;
+}
+.redWhite{
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     height: 100%;
+}
+.Advert{
+     background-color: #C3002E;
+     color: #18293C;
+}

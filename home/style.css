@@ -4,6 +4,10 @@
      box-sizing: border-box;
      font-family: 'inter';
 }
+body{
+     height: 100vh;
+     overflow: hidden;
+}
 nav{
      padding: 30px 60px;
      display: flex;
