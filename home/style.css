@@ -29,6 +29,7 @@ nav{
 }
 .links {
      gap: 35px;
+     color: #18293C;
 }
 .link{
      text-transform: capitalize;
@@ -44,7 +45,7 @@ nav{
      border-radius: 100%;
      position: absolute;
      left: 40%;
-     bottom: -60%;
+     bottom: -70%;
 }
 .navbutton{
      border: 1px solid #C3002E;
@@ -100,4 +101,53 @@ img{
      width: 100%;
      height: 100%;
      object-fit: contain;
+}
+.icons{
+     padding: 30px 34px;
+     display: none;
+     justify-content: space-between;
+}
+.icons i{
+     font-size: 25px;
+}
+.icons .act{
+     color: #C3002E;
+}
+
+@media (max-width: 768px){
+     body{
+          height: 100vh;
+          overflow: hidden;
+     }
+     nav{
+          padding: 30px 20px;
+     }
+     #hero{
+          padding: 42px 32px;
+          display: block;
+          display: flex;
+          flex-direction: column-reverse;
+          height: max-content;
+     }
+     .heroHead{
+          font-size: 30px;
+     }
+     .heroText{
+          font-size: 16px;
+     }
+     .heroButton{
+          padding: 10px;
+          font-size: 15px;
+          float: right;
+     }
+     .heroImg{
+          height: 50vh!important;
+     }
+     .links{
+          display: none;
+     }
+     .icons{
+          margin-top: -15px;
+          display: flex;
+     }
 }
