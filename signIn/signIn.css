@@ -12,7 +12,24 @@ body{
 }
 nav{
      position: absolute;
+     padding: 30px 60px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     height: 10vh;
      width: 100vw;
+     z-index: 1;
+}
+.brand{
+     color: #18293C;
+     font-size: 20px;
+     font-size: 900;
+}
+.we{
+     color: #C3002E;
+}
+.brand:hover{
+     color: #C3002E;
 }
 .back{
      cursor: pointer;
