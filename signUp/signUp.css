@@ -58,13 +58,14 @@ nav{
 .signInForm{
      margin: auto;
      border: #183F63 1px solid;
-     padding: 50px 40px;
+     padding: 20px 40px;
      border-radius: 20px;
      width: 450px;
      height: max-content;
      display: flex;
      flex-direction: column;
-     gap: 30px;
+     /* gap: 30px; */
+     margin-top: 10px;
 }
 .signInForm h2{
      font-size: 22px;
@@ -74,7 +75,7 @@ nav{
 .signInForm form{
      display: flex;
      flex-direction: column;
-     gap: 30px;
+     gap: 10px;
 }
 .signInForm div{
      display: flex;
@@ -110,7 +111,7 @@ nav{
 .forget{
      color: #C3002E;
 }
-.signInForm button, a{
+.signInForm button{
      background-color: #BC012E;
      color: #fff;
      cursor: pointer;
@@ -122,11 +123,6 @@ nav{
      padding: 16px 135px;
      width: max-content;
      margin: 0 auto;
-}
-.signInForm button:hover, a:hover{
-     background-color: transparent;
-     border: 1px solid #BC012E;
-     color: #BC012E;
 }
 .circles1{
      position: absolute;
@@ -158,10 +154,14 @@ nav{
 .circles2 .circle1{
      rotate: 120deg;
 }
-.or{
-     text-align: center;
-     margin-top: -15px;
-     font-weight: 900;
+.passwords{
+     flex-direction: row!important;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+}
+.passwords input{
+     width: 100%;
 }
 @media (max-width: 768px){
      body{
@@ -179,7 +179,7 @@ nav{
      .Advert{
           background-color: transparent;
           padding: 0 50px;
-          padding-top: 150px;
+          padding-top: 100px;
           padding-right: 100px;
           position: static;
      }
@@ -198,7 +198,7 @@ nav{
           left: -25%;
      }
      .signInForm{
-          margin-top: 60px;
+          margin-top: 30px;
           width: 350px;
           border: 1px solid #fff;
           color: #000;
