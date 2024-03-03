@@ -112,9 +112,15 @@ img{
      object-fit: contain;
 }
 .icons{
+     position: fixed;
      padding: 30px 34px;
      display: none;
      justify-content: space-between;
+     width: 100%;
+     bottom: 1%;
+}
+.icons a{
+     color: #0f0e0e;
 }
 .icons i{
      font-size: 25px;
