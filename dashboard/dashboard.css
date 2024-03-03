@@ -116,35 +116,32 @@ nav i{
      font-size: 20px;
      font-weight: 300;
 }
-.gen{
-     width: 300px;
-     height: 180px;
-     background-color: #623E8E;
-     border-radius: 30px;
-     display: grid;
-     place-items: center;
-}
 .categories{
      padding: 0 20px;
-     padding-bottom: 20px;
+     margin-bottom: 20px;
 }
 .category{
      display: grid;
      grid-template-columns: repeat(4, 1fr);
-     gap: 15px;
+     column-gap: 15px;
+     row-gap: 30px;
 }
 .cat{
      border-radius: 30px;
-     width: 300px;
      height: 180px;
+}
+.gen{
+     width: 320px;
+     background-color: #623E8E;
+     border-radius: 30px;
+     display: grid;
+     place-items: center;
 }
 .sub{
      background: transparent;
      border-top: 10px solid #fff;  
      display: grid;
      place-items: center;
-     width: 280px;
-     height: 150px;
      color: #623E8E;
 }
 .suber{
@@ -223,7 +220,7 @@ nav i{
      justify-content: center;
      align-items: center;
      text-align: center;
-     gap: 12px;
+     gap: 10px;
 }
 .laneIcon{
      font-weight: 900;
@@ -232,6 +229,155 @@ nav i{
      color: transparent;
      background-image: linear-gradient(to top, transparent,#ffffffab ,#fdfdfdf1, #fff);
 }
-/* @media (max-width: 768px){
-
-} */
+.laneH1{
+     font-weight: 800;
+     font-size: 24px;
+}
+.laneH1 span{
+     font-size: 40px;
+}
+.catLenes{
+     background-color: #088B7B;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     position: relative;
+}
+.firstCircle{
+     width: 145px;
+     height: 132px;
+     border-radius: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     background-color: #4FC5B6;
+}
+.secondCircle{
+     width: 122px;
+     height: 115px;
+     border-radius: 100%;
+     background-color: #76D2C7;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+}
+.lensText{
+     width: 100px;
+     height: 91px;
+     border-radius: 100%;
+     background-color: #088B7B;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     color: #fff;
+     font-size: 20px;
+     text-transform: uppercase;
+     font-weight: 800;
+}
+.handlde{
+     position: absolute;
+     width: 17.17px;
+     height: 35px;
+     background-color: #4FC5B6;
+     rotate: 135deg;
+     bottom: 13%;
+     right: 28%;
+}
+.shape{
+     position: absolute;
+     border-radius: 26% 100% 24% 52% / 0% 82% 23% 88%;
+     width: 44px;
+     height: 39px;
+     background: linear-gradient(270deg, #76D2C7, #76d2c76e);
+     left: 10%;
+     bottom: 15%;
+}
+.catNote{
+     background-color: #FFB763;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     position: relative;
+}
+.lines{
+     width: 80%;
+     display: flex;
+     flex-direction: column;
+     gap: 28.5px;
+}
+.line{
+     width: 100%;
+     height: 2px;
+     background-color: black;
+}
+.noteText{
+     position: absolute;
+     width: 100%;
+     font-size: 36px;
+     color: #0d0d0d;
+     font-weight: 900;
+}
+.note{
+     position: absolute!important;
+     left: 10%!important;
+     top: -8%!important;
+}
+.pad{
+     position: absolute;
+     right: 10%;
+     bottom: -8%;
+}
+.catMore{
+     background-color: #E5E5E5;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     display: none;
+}
+.icons{
+     position: fixed;
+     padding: 30px 34px;
+     display: none;
+     justify-content: space-between;
+     width: 100%;
+     bottom: 1%;
+     background-color: #ffffff65;
+}
+.icons a{
+     color: #0f0e0e;
+}
+.icons i{
+     font-size: 25px;
+}
+.icons .act{
+     color: #C3002E;
+}
+@media (max-width: 768px){
+     nav{
+          padding: 15px;
+     }
+     .offcan{
+          display: none;
+     }
+     .category{
+          grid-template-columns: repeat(2,1fr);
+     }
+     .gen{
+          width: 190px;
+     }
+     .suber{
+          width: 170px;
+     }
+     .catMore{
+          display: flex;
+     }
+     .icons{
+          margin-top: -15px;
+          display: flex;
+     }
+}
