@@ -1,46 +1,117 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
+*{
      padding: 0;
      margin: 0;
-     font-family: consolas;
      box-sizing: border-box;
-   }
-
-   
-   .calendar {
+     font-family: "Inknut Antiqua", serif;
+}
+a{
+     text-decoration: none!important;
+     color: #000;
+}
+body{
+     height: 100vh;
+     overflow: hidden;
+     background: linear-gradient(to bottom, #623F8E 90%, #633f8e31);
+}
+nav{
+     padding-left: 30px;
+     padding-top: 30px;
+     cursor: pointer;
+     position: fixed;
+     top: 0;
+}
+nav i{
+     color: #fff;
+}
+.offcan{
+     display: none;
+}
+.offcanvas{
+     background-color: #623F8E;
+     border-radius: 0px 30px 30px 0px;
+     width: 250px!important;
+}
+.offcanvas-body{
+     display: flex;
+     flex-direction: column;
+     gap: 30px;
+}
+.wel{
+     display: flex;
+     align-items: center;
+     gap: 5px;
+}
+.wel h5{
+     color: #fff;
+     font-size: 24px;
+     font-weight: medium;
+}
+.dp{
+     width: 85px;
+     height: 80px;
+}
+.dp img{
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     border-radius: 8px;
+}
+.links{
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+}
+.link{
+     color: #ffffffbb;
+     font-size: 20px;
+     cursor: pointer;
+}
+.link a{
+     text-decoration: none;
+     color: #ffffff8f;
+}
+.active a{
+     color: #fff;
+}
+.link i{
+     color: #BC012E;
+}
+.calendar {
      margin: 0 auto;
-     height: 30rem;
-     width: max-content;
-     background-color: #fff;
-     border-radius: 25px;
+     margin-top: 40px;
+     height: 450px;
+     width: 756px;
+     background-color: #D9D9D9;
      overflow: hidden;
      padding: 35px 50px 0px 50px;
-   }
+     position: relative;
+     border-radius: 20px;
+}
    
    .calendar {
      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
    }
    
    .calendar-header {
-     background: #ffb200;
+     background: #623F8E;
      display: flex;
      justify-content: space-between;
      border-radius: 7px;
      align-items: center;
-     font-weight: 700;
      color: #ffffff;
      padding: 10px;
-   }
-   
-   .calendar-body {
-     padding: 10px;
+     font-size: 25px;
+     font-size: 500;
    }
    
    .calendar-week-days {
-     display: grid;
-     grid-template-columns: repeat(7, 1fr);
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
      font-weight: 600;
      cursor: pointer;
-     color: rgb(104, 104, 104);
    }
    
    .calendar-week-days div:hover {
@@ -50,17 +121,23 @@
    }
    
    .calendar-week-days div {
-     display: grid;
+     display: flex;
      place-items: center;
-     color: #ffb200;
+     color: #623F8E;
      height: 50px;
+     text-align: center;
    }
    
    .calendar-days {
      display: grid;
      grid-template-columns: repeat(7, 1fr);
-     gap: 2px;
-     color: #0A0921;
+     font-size: 20px;
+     font-weight: 200;
+     color: #000000;
+     row-gap: 20px!important;
+     column-gap: 65px;
+     text-align: center;
+     width: 100%;
    }
    
    .calendar-days div {
@@ -122,21 +199,21 @@
    
    .calendar-days div:hover {
      transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
-     background-color: #ffb300a1;
+     background-color: #633f8e6e;
      border-radius: 20%;
      color: #f8fbff;
    }
    
    .calendar-days div.current-date {
      color: #f8fbff;
-     background-color: #ffb200;
+     background-color: #623F8E;
      border-radius: 20%;
    }
    
    .month-list {
      position: relative;
      left: 0;
-     top: -130px;
+     top: -54%;
      background-color: #ebebeb;
      color: #151426;
      display: grid;
@@ -159,7 +236,7 @@
    }
    
    .month-list>div>div:hover {
-     background-color: #ffb200;
+     background-color: #623F8E;
      color: #f8fbff;
      transform: scale(0.9);
      transition: all 0.2s ease-in-out;
@@ -185,31 +262,34 @@
    .date-time-formate {
      height: 4rem;
      width: 100%;
-     font-family: Dubai Light, Century Gothic;
      position: relative;
      display: flex;
-     top: 50px;
+     top: 20px;
      justify-content: center;
      align-items: center;
+     color: #fff;
    }
    
    .day-text-formate {
-     font-family: Microsoft JhengHei UI;
-     font-size: 1.4rem;
-     padding-right: 5%;
-     border-right: 3px solid #ffb200;
+     font-size: 32px;
+     font-weight: 500;
+     padding-right: 35px;
+     border-right: 5px solid #fff;
    }
    
    .date-time-value {
      display: block;
      position: relative;
      text-align: center;
-     padding-left: 5%;
+     padding-left: 35px;
    }
    
    .time-formate {
-     font-size: 1.5rem;
+     font-size: 32px;
    }
+   .date-formate {
+   font-size: 20px;
+}
    
    .time-formate.hideTime {
      animation: hidetime 1.5s forwards;
@@ -294,3 +374,56 @@
        opacity: 1;
      }
    }
+   .circle{
+     width: 94px;
+     height: 82px;
+     background-color: #623F8E;
+     border-radius: 100%;
+     position: absolute;
+   }
+   .circle1{
+     left: 50px;
+     top: -60px;
+   }
+   .circle2{
+     right: 50px;
+     top: -60px;
+   }
+   .circle3{
+     left: 50px;
+     bottom: -60px;
+   }
+   .circle4{
+     right: 50px;
+     bottom: -60px;
+   }
+   .circle5{
+     left: -60px;
+     top: 80px;
+   }
+   .circle6{
+     left: -60px;
+     bottom: 80px;
+   }
+   .circle7{
+     right: -60px;
+     top: 80px;
+   }
+   .circle8{
+     right: -60px;
+     bottom: 80px;
+   }
+
+   @media (max-width: 768px){
+     body{
+          height: 100vh;
+          overflow: hidden;
+     }
+     .arrow-left{
+          display: none!important;
+     }
+     .offcan{
+          display: block!important;
+     }
+
+}

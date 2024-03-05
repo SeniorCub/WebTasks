@@ -14,50 +14,98 @@
 <body>
 
      <nav>
-          <i class="fas fa-arrow-left"></i>
+          <a href="/dashboard/dashboard.html" class="arrow-left">
+               <i class="fa-solid fa-arrow-left"></i>
+          </a>
+               <div class="offcan">
+                    <a class="btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                         <i class="fa-solid fa-bars"></i>
+                    </a>
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                         <div class="offcanvas-header">
+                              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                         </div>
+                         <div class="offcanvas-body">
+                              <div class="wel">
+                                   <div class="dp">
+                                        <img src="https://img.freepik.com/free-photo/happy-african-american-young-man-colorful-shirt-wearing-glasses-looking-camera-smiling-cheerfully_141793-108881.jpg?t=st=1709230069~exp=1709233669~hmac=cc145b4086b98893bfc0e35b08fa99f738cc6ba73fc2ba68c0ae291fa7fb785e&w=740" alt="">
+                                   </div>
+                                   <h5 class="offcanvas-title" id="offcanvasExampleLabel">SeniorCub</h5>
+                              </div>
+                              <div class="links">
+                                   <div class="link">
+                                        <a href="/home/index.html"><i class="fa-solid fa-house"></i> Home</a>
+                                   </div>
+                                   <div class="link">
+                                        <a href=""><i class="fa-solid fa-calculator"></i> Calculator</a>
+                                   </div>
+                                   <div class="link">
+                                        <a href=""><i class="fa-solid fa-note-sticky"></i> Notepad</a>
+                                   </div>
+                                   <div class="link active">
+                                        <a href="/carlender/carlender.html"><i class="fa-solid fa-calendar-days "></i> Calender</a>
+                                   </div>
+                                   <div class="link">
+                                        <a href=""><i class="fa-solid fa-business-time"></i> Time</a>
+                                   </div>
+                                   <div class="link">
+                                        <a href=""><i class="fa-solid fa-gamepad"></i> Games</a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
      </nav>
 
      <div class="calen">
           <div class="contianer">
                <div class="calendar">
+               <div class="circle circle1"></div>
+               <div class="circle circle2"></div>
+               <div class="circle circle3"></div>
+               <div class="circle circle4"></div>
+               <div class="circle circle5"></div>
+               <div class="circle circle6"></div>
+               <div class="circle circle7"></div>
+               <div class="circle circle8"></div>
                     <div class="calendar-header">
-                    <span class="month-picker" id="month-picker"> May </span>
-                    <div class="year-picker" id="year-picker">
-                         <span class="year-change" id="pre-year">
-                         <
-                         </span>
-                         <span id="year">2020 </span>
-                         <span class="year-change" id="next-year">
-                         >
-                         </span>
-                    </div>
+                         <span class="month-picker" id="month-picker"> May </span>
+                         <div class="year-picker" id="year-picker">
+                              <span class="year-change" id="pre-year">
+                                   <i class="fas fa-angle-left"></i>
+                              </span>
+                              <span id="year">2024 </span>
+                              <span class="year-change" id="next-year">
+                                   <i class="fas fa-angle-right"></i>
+                              </span>
+                         </div>
                     </div>
                
                     <div class="calendar-body">
-                    <div class="calendar-week-days">
-                         <div>Sun</div>
-                         <div>Mon</div>
-                         <div>Tue</div>
-                         <div>Wed</div>
-                         <div>Thu</div>
-                         <div>Fri</div>
-                         <div>Sat</div>
-                    </div>
-                    <div class="calendar-days">
-                    </div>
+                         <div class="calendar-week-days">
+                              <div>Sun</div>
+                              <div>Mon</div>
+                              <div>Tue</div>
+                              <div>Wed</div>
+                              <div>Thu</div>
+                              <div>Fri</div>
+                              <div>Sat</div>
+                         </div>
+                         <div class="calendar-days">
+                         </div>
                     </div>
                     <div class="calendar-footer">
                     </div>
-                    <div class="date-time-formate">
-                    <div class="day-text-formate">TODAY</div>
-                    <div class="date-time-value">
-                         <div class="time-formate">01:41:20</div>
-                         <div class="date-formate">03 - march - 2022</div>
-                    </div>
-                    </div>
                     <div class="month-list"></div>
                </div>
-               </div>
+          </div>
+     </div>
+     <div class="date-time-formate">
+          <div class="day-text-formate">TODAY</div>
+          <div class="date-time-value">
+               <div class="time-formate">01:41:20</div>
+               <div class="date-formate">03 - march - 2022</div>
+          </div>
      </div>
 
     <!-- BootStrap JavaScript LInk -->
