@@ -1,0 +1,131 @@
+*{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     color: #FEFEFA, #020F49, #FFB200, #333, #00000030, #fff, #fefefa28;
+}
+section{
+     width: 100%;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     gap: 50px;
+     background-color: #3333339a;
+}
+.container{
+     display: grid;
+     grid-template-columns: 3fr 1fr;
+     align-items: center;
+     width: 100%;
+     background-color: transparent;
+     color: #fff;
+     border-radius: 0px;
+     overflow-x: visible;
+}
+#quizQuestion{
+     width: 80vh;
+     height: 40vh;
+     border: 1px solid black;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-weight: 500;
+     font-size: 40px;
+     text-align: center;
+}
+#quizOptions{
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 20px;
+     padding: 20px;
+     text-align: center;
+}
+.option{
+     width: 100%;
+     height: 100%;
+     padding: 10px;
+     border: 1px solid black;
+     border-radius: 20px;
+     cursor: pointer;
+}
+#quizOptions .option:hover{
+     cursor: pointer;
+}
+#scoreBoard{
+     margin: 20px;
+     padding: 20px;
+     border: 1px solid black;
+     font-size: 20px;
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+}
+.score{
+     margin: 10px;
+     padding: 10px;
+}
+.btns button{
+     padding: 10px;
+     margin: 10px;
+     border: 1px solid black;
+     border-radius: 20px;
+     font-size: 20px;
+     cursor: pointer;
+}
+#progressBar{
+     width: 100%;
+     height: 20px;
+     background-color: #ccc;
+     border-radius: 20px;
+     border: 1px solid black;
+}
+#progress{
+     width: 0%;
+     height: 100%;
+     background-color: green;
+     border-radius: 20px;
+}
+.display{
+     text-align: center;
+     color: red;
+     font-weight: 800;
+     font-size: 40px;
+}
+.start{
+     padding: 10px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     border: 1px solid black;
+     background-color: #ccc;
+     border-radius: 20px;
+     font-size: 20px;
+     position: absolute;
+     width: 50vw;
+     height: 50vh;
+     bottom: 30%;
+     left: 25%;
+}
+#start{
+     padding: 20px;
+     border-radius: 20px;
+     border: 2px solid black;
+     cursor: pointer;
+     font-weight: 600;
+}
+input{
+     width: 30px;
+     height: 30px;
+}
+.btns {
+     border: none;
+     padding: 0px;
+     border-radius: 0%;
+   }
+label{
+     color: #333;
+     font-weight: 900;
+}
