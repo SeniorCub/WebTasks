@@ -97,4 +97,21 @@ function saveAsImage() {
      // Clean up: remove the link from the document
      document.body.removeChild(link);
  }
+ speech.addEventListener('click', () => {
+     // Get the text content of the quote and author
+     const quoteText = document.querySelector('.quote').textContent;
+     const authorText = document.querySelector('.name').textContent;
  
+     // Concatenate the quote and author text
+     const textToSpeak = `${quoteText} by ${authorText}`;
+ 
+     // Create a new SpeechSynthesisUtterance object with the text to speak
+     const speechUtterance = new SpeechSynthesisUtterance(textToSpeak);
+ 
+     // Use the default speech synthesis voice
+     const voices = window.speechSynthesis.getVoices();
+     speechUtterance.voice = voices[0];
+ 
+     // Speak the text
+     window.speechSynthesis.speak(speechUtterance);
+ }); 
