@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
+*{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: "Inknut Antiqua", serif;
+}
+a{
+     text-decoration: none!important;
+     color: #000;
+}
+body{
+     height: 100vh;
+     overflow: hidden;
+     background: #183F63;
+}
+nav{
+     padding-left: 30px;
+     padding-right: 30px;
+     padding-top: 30px;
+     position: fixed;
+     top: 0;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+}
+nav i{
+     font-size: 40px;
+     cursor: pointer;
+     color: #D9D9D9;
+}
+.others{
+     display: flex;
+     gap: 20px;
+     justify-content: center;
+     align-items: center;
+}
+.wrapper{
+     margin: 0 auto;
+     margin-top: 10vh;
+     height: 80vh;
+     width: 60vw;
+     background: url(Rectangle.png) no-repeat center center/cover;
+     border-radius: 15px;
+     padding: 30px 30px 25px;
+     box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+     display: flex;
+     flex-direction: column;
+}
+.main{
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+}
+header, .content :where(i, p, span){
+  color: #fff;
+}
+.wrapper header{
+     font-size: 60px;
+     font-weight: 600;
+     text-align: center;
+     color: #BA002F;
+}
+.content .quote-area{
+  display: flex;
+  justify-content: center;
+}
+.quote-area i{
+     color: #FFF;
+     font-size: 40px;
+     font-style: normal;
+     font-weight: 600;
+     line-height: normal;
+}
+.quote-area i:first-child{
+  margin: 3px 10px 0 0;
+}
+.quote-area i:last-child{
+  display: flex;
+  margin: 0 0 3px 10px;
+  align-items: flex-end;
+}
+.quote-area .quote{
+     font-size: 32px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: 50px;
+     text-align: center;
+}
+.content .author{
+     display: flex;
+     color: #FFF;
+     font-size: 32px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: normal;
+     justify-content: flex-end;
+}
+.author span:first-child{
+  margin: -7px 5px 0 0;
+  font-family: monospace;
+}
+.buttons .features{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.features ul{
+  display: flex;
+}
+.features ul li{
+     margin: 0 5px;
+     height: 75px;
+     width: 75px;
+     display: flex;
+     font-size: 35px;
+     cursor: pointer;
+     color: #fff;
+     list-style: none;
+     border-radius: 50%;
+     align-items: center;
+     justify-content: center;
+     border: 2px solid #183F63;
+     transition: all 0.3s ease;
+}
+.features ul li:first-child{
+  margin-left: 0;
+}
+ul li:is(:hover, .active){
+  color: #fff;
+  background: #333;
+}
+ul .speech.active{
+  pointer-events: none;
+}
+.buttons button:hover{
+     background-color: #333;
+     color: #183F63;
+}
+.buttons button{
+  border: none;
+  color: #fff;
+  outline: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 13px 22px;
+  border-radius: 30px;
+  background: #183F63;
+}
+.buttons button.loading{
+  opacity: 0.7;
+  pointer-events: none;
+}
