@@ -180,12 +180,14 @@ nav{
      .Advert{
           background-color: transparent;
           padding: 0 50px;
-          padding-top: 100px;
+          padding-top: 50px;
           padding-right: 100px;
           position: static;
      }
      .Advert .head{
           font-size: 32px;
+          text-align: left;
+          width: 60%;
      }
      .Advert .para{
           font-size: 20px;
@@ -204,6 +206,9 @@ nav{
           border: 1px solid #fff;
           color: #000;
           padding: 20px;
+          margin: 25px;
+          position: fixed;
+          z-index: 2;
      }
      .signInForm input{
           border: 1px solid #fff!important;

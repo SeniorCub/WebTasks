@@ -111,7 +111,7 @@ nav{
 .forget{
      color: #C3002E;
 }
-.signInForm button, a{
+.signInForm button, .signInForm a{
      background-color: #BC012E;
      color: #fff;
      cursor: pointer;
@@ -124,7 +124,7 @@ nav{
      width: max-content;
      margin: 0 auto;
 }
-.signInForm button:hover, a:hover{
+.signInForm button:hover, .signInForm a:hover{
      background-color: transparent;
      border: 1px solid #BC012E;
      color: #BC012E;
@@ -180,12 +180,14 @@ nav{
      .Advert{
           background-color: transparent;
           padding: 0 50px;
-          padding-top: 150px;
+          padding-top: 50px;
           padding-right: 100px;
           position: static;
      }
      .Advert .head{
           font-size: 32px;
+          text-align: left;
+          width: 60%;
      }
      .Advert .para{
           font-size: 20px;
@@ -199,11 +201,14 @@ nav{
           left: -25%;
      }
      .signInForm{
-          margin-top: 60px;
+          margin-top: 30px;
           width: 350px;
           border: 1px solid #fff;
           color: #000;
           padding: 20px;
+          margin: 25px;
+          position: fixed;
+          z-index: 2;
      }
      .signInForm input{
           border: 1px solid #fff!important;
