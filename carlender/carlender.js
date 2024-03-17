@@ -138,3 +138,16 @@ const isLeapYear = (year) => {
        )}: ${`${timer.getSeconds()}`.padStart(2, '0')}`;
      todayShowTime.textContent = formateTimer;
    }, 1000);
+   function modifyDays() {
+     const screenWidth = window.innerWidth;
+     if (screenWidth <= 600) { // Adjust the threshold according to your screen size requirement
+         const days = document.querySelectorAll('.calendar-week-days div');
+         days.forEach(day => {
+             day.textContent = day.textContent.charAt(0); // Set content to the first letter
+         });
+     }
+ }
+
+ // Execute the function when the page loads and when the window is resized
+ window.onload = modifyDays;
+ window.onresize = modifyDays;
