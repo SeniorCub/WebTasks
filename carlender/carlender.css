@@ -424,6 +424,72 @@ nav i{
      }
      .offcan{
           display: block!important;
+          z-index: 3;
+          position: absolute;
      }
-
+     .contentss{
+          position: absolute;
+          display: flex;
+          flex-direction: column-reverse;
+          margin-top: 10vh;
+          gap: 30px;
+          justify-content: center;
+          align-items: center;
+          z-index: -1;
+     }
+     .calendar {
+          height: 60vh;
+          width: 90vw;
+     }
+     .date-time-formate{
+          padding: 20px!important;
+     }
+     .day-text-formate, .time-formate{
+          font-size: 20px;
+     }
+     .date-formate{
+          font-size: 15px;
+     }
+     .calendar-days {
+          row-gap: 5px!important;
+          column-gap: 5px;
+     }
+     .circle{
+          width: 60px;
+          height: 55px;
+     }
+     .circle1{
+          top: -8%;
+     }
+     .circle2{
+          top: -8%;
+     }
+     .circle3{
+          bottom: -8%;
+     }
+     .circle4{
+          bottom: -8%;
+     }
+     .circle5{
+          left: -8%;
+     }
+     .circle6{
+          left: -8%;
+     }
+     .circle7{
+          right: -8%;
+     }
+     .circle8{
+          right: -8%;
+     }
+     .month-list {
+          top: -65%;
+          display: flex;
+          flex-wrap: wrap;
+     }
+     .calendar-header{
+          width: max-content;
+          font-size: 20px;
+          margin-left: -5%;
+     }
 }
