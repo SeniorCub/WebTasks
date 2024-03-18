@@ -164,7 +164,6 @@ const progressBar = document.querySelector("#progress");
 const nextButton = document.querySelector("#next");
 const result = document.querySelector("#submit");
 const radioButtons = document.querySelectorAll('input[type="radio"]');
-const displayy = document.querySelector(".display");
 const answer = document.querySelector(".answer");
 var audio = document.getElementById("myAudio");
 
@@ -172,7 +171,6 @@ let score = 0; // Changed variable name to avoid confusion
 
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#start").addEventListener("click", start);
-    displayy.innerText = "Click the start button to start the game";
     radioButtons.forEach((radioButton) => {
         radioButton.checked = false;
     });
@@ -198,7 +196,6 @@ function start() {
     scoreDisplay.innerText = 0; // Update the displayed score
     totalNumber.innerText = shuffledQuestions.length;
     progressBar.style.width = `${(1 / shuffledQuestions.length) * 100}%`;
-    displayy.innerText = "The Game Has Started";
     document.querySelector(".start").style.display = "none";
     let timer = 25;
     let interval = setInterval(() => {
@@ -212,7 +209,7 @@ function start() {
             time.style.color = "red";
             audio.src = "./audio/mixkit-classic-short-alarm-993.wav";
         } else {
-            time.style.color = "black";
+            time.style.color = "#fff";
         }
     }, 1000);
     audio.src = "./audio/mixkit-game-level-music-689.wav";

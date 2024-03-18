@@ -1,28 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
 *{
      padding: 0;
      margin: 0;
      box-sizing: border-box;
-     color: #FEFEFA, #020F49, #FFB200, #333, #00000030, #fff, #fefefa28;
+     font-family: "Inknut Antiqua", serif;
+}
+a{
+     text-decoration: none!important;
+     color: #000;
+}
+body{
+     height: 100vh;
+     overflow: hidden;
+     background: linear-gradient(180deg, #BA002F 47.92%, #E05419 74.67%);
+}
+nav{
+     padding: 10px 30px;
+     position: fixed;
+     top: 0;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+}
+nav i{
+     font-size: 40px;
+     cursor: pointer;
+     color: #fff;
+}
+
+nav #time{
+     background-color: #07163E;
+     box-shadow: drop-shadow(0px 17.689px 17.689px rgba(0, 0, 0, 0.25));
+     padding: 10px;
+     border-radius: 50%;
+     color: #FFF;
+     text-shadow: 0px 17.689px 17.689px rgba(0, 0, 0, 0.25);
+     font-size: 35px;
+     font-weight: 500;
 }
 section{
      width: 100%;
-     height: 100vh;
+     height: 90vh;
      display: flex;
      justify-content: center;
      align-items: center;
      flex-direction: column;
      gap: 50px;
-     background-color: #3333339a;
 }
 .container{
-     display: grid;
-     grid-template-columns: 3fr 1fr;
+     margin-top: 10vh;
      align-items: center;
      width: 100%;
      background-color: transparent;
      color: #fff;
      border-radius: 0px;
      overflow-x: visible;
+}
+.quiz-container{
+     display: grid;
+     grid-template-columns: 2fr 1fr;
 }
 #quizQuestion{
      width: 80vh;
@@ -37,7 +74,6 @@ section{
 }
 #quizOptions{
      display: grid;
-     grid-template-columns: repeat(2, 1fr);
      gap: 20px;
      padding: 20px;
      text-align: center;
@@ -99,22 +135,46 @@ section{
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     border: 1px solid black;
-     background-color: #ccc;
-     border-radius: 20px;
-     font-size: 20px;
+     background: linear-gradient(180deg, #BA002F 47.92%, #E05419 74.67%);
      position: absolute;
-     width: 50vw;
-     height: 50vh;
-     bottom: 30%;
-     left: 25%;
+     width: 100vw;
+     height: 100vh;
+     display: none;
+}
+.start nav{
+     padding-left: 30px;
+     padding-right: 30px;
+     padding-top: 30px;
+     position: fixed;
+     top: 0;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+}
+.start h1{
+     color: #FFF;
+     font-size: 50px;
+     font-style: normal;
+     font-weight: 600;
+     line-height: normal;
+     border-radius: 50%;
+     padding: 60px 40px 30px;
+     border: 5px solid #fff;
+}
+.start h1 span{
+     font-size: 80px;
 }
 #start{
-     padding: 20px;
-     border-radius: 20px;
-     border: 2px solid black;
+     padding: 25px 105px;
      cursor: pointer;
      font-weight: 600;
+     border-radius: 15px;
+     background: linear-gradient(180deg, #FFF 95.96%, rgba(255, 255, 255, 0.00) 100%);
+     box-shadow: 3px 5px 5.2px 0px rgba(0, 0, 0, 0.25);
+     color: #000;
+     border: none;
+     font-size: 28px;
 }
 input{
      width: 30px;
