@@ -7,30 +7,42 @@ let saveAss = document.querySelector('.saveAs');
 let generateNew = document.querySelector('.generateNew');
 
 document.addEventListener('DOMContentLoaded', async () => {
-   
-    // Initial fetch and display
+    // Fetch and display a random quote on page load
     const initialQuote = await fetchRandomQuote();
     displayQuote(initialQuote);
 });
- // Function to fetch a random quote
- async function fetchRandomQuote() {
-     const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-     const apiUrl = 'https://zenquotes.io/api/quotes/';
-     try {
-         const response = await fetch(proxyUrl + apiUrl);
-         const data = await response.json();
-         return data[0]; // Return the first quote object from the response array
-     } catch (error) {
-         console.error('Error fetching quotes:', error);
-     }
- }
 
- // Function to display quote and author
- function displayQuote(quoteObj) {
-     quote.innerHTML = quoteObj.q;
-     quoteAuthor.innerHTML = `- ${quoteObj.a}`;
- }
+// Function to fetch a random quote
+async function fetchRandomQuote() {
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+    const apiUrl = 'https://zenquotes.io/api/quotes/';
+    try {
+        const response = await fetch(proxyUrl + apiUrl);
+        const data = await response.json();
+        return data[0]; // Return the first quote object from the response array
+    } catch (error) {
+        console.error('Error fetching quotes:', error);
+    }
+}
 
+// Function to display quote and author
+function displayQuote(quoteObj) {
+    quote.innerHTML = quoteObj.q;
+    quoteAuthor.innerHTML = `- ${quoteObj.a}`;
+}
+
+// Function to read out the quote including the author
+function readQuote() {
+    const textToRead = `${quote.textContent} by ${quoteAuthor.textContent}`;
+    const speechSynthesis = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(textToRead);
+    speechSynthesis.speak(utterance);
+}
+
+// Event listener for clicking the 'speech' element
+speech.addEventListener('click', () => {
+    readQuote();
+});
 
 // Event listener for generating a new quote
 generateNew.addEventListener('click', async () => {
@@ -43,7 +55,6 @@ copy.addEventListener('click', () => {
     const textToCopy = `${quote.textContent} - ${quoteAuthor.textContent}`;
     navigator.clipboard.writeText(textToCopy)
         .then(() => {
-            // Notification using browser toolkit
             alert('Quote copied to clipboard!');
         })
         .catch(err => {
@@ -53,7 +64,6 @@ copy.addEventListener('click', () => {
 
 // Event listener for saving quote as image
 saveAss.addEventListener('click', () => {
-    // Assuming you have a function saveAsImage() defined elsewhere
     saveAsImage();
 });
 
@@ -63,6 +73,7 @@ twitter.addEventListener('click', () => {
     const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(textToTweet)}`;
     window.open(twitterUrl, '_blank');
 });
+
 function saveAsImage() {
      // Create a canvas element
      const canvas = document.createElement('canvas');
