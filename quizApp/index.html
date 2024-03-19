@@ -19,7 +19,7 @@
 
           <div class="qzina">
                <div class="h1">Quiz</div>
-               <div class="amount"><span id="questionNumber">0</span>/<span id="totalNumber">0</span></div>
+               <div class="amount"><span id="questionNumber">1</span>/<span id="totalNumber">5</span></div>
           </div>
 
           <div id="time">0</div>
@@ -37,35 +37,30 @@
      </div>
      
      <section>
-          <div class="container">
-               <div class="quiz-container">
-                    <div class="letSide">
-                         <div id="questionNumbe">Question: <span id="questionNumber">0</span>/<span id="totalNumber">0</span> </div>
-                         <div id="quizQuestion">This is Reuben's Quiz App</div>
+          <div class="continer">
+               <div class="letSide">
+                    <div id="questionNumb">Question <span id="questionNumber">1</span>:</div>
+                    <div id="quizQuestion">Which gas makes up the majority of Earth’s  atmosphere?</div>
+               </div>
+               
+               <div id="quizOptions">
+                    <div class="option">
+                         <input type="radio" name="option" id="option1" class="answer">
+                         <label for="option1" id="option1Label">Answer 1</label>
                     </div>
-                    
-                    <div id="quizOptions">
-                         <div class="option">
-                              <input type="radio" name="option" id="option1" class="answer">
-                              <label for="option1" id="option1Label">Answer 1</label>
-                         </div>
-                         <div class="option">
-                              <input type="radio" name="option" id="option2">
-                              <label for="option2" id="option2Label">Answer 2</label>
-                         </div>
-                         <div class="option">
-                              <input type="radio" name="option" id="option3">
-                              <label for="option3" id="option3Label">Answer 3</label>
-                         </div>
-                         <div class="option">
-                              <input type="radio" name="option" id="option4">
-                              <label for="option4" id="option4Label">Answer 4</label>
-                         </div>
+                    <div class="option">
+                         <input type="radio" name="option" id="option2">
+                         <label for="option2" id="option2Label">Answer 2</label>
                     </div>
-                    <audio id="myAudio" autoplay style="display:none;">
-                         <source src="./audio/mixkit-greeting-music-box-tone-699.wav" type="audio/mp3">
-                     </audio>
-               </div>   
+                    <div class="option">
+                         <input type="radio" name="option" id="option3">
+                         <label for="option3" id="option3Label">Answer 3</label>
+                    </div>
+                    <div class="option">
+                         <input type="radio" name="option" id="option4">
+                         <label for="option4" id="option4Label">Answer 4</label>
+                    </div>
+               </div>
           </div>
 
           <div class="btns">
@@ -73,6 +68,9 @@
                <button id="submit">Submit Quiz</button>
               
           </div>
+          <audio id="myAudio" autoplay style="display:none;">
+               <source src="./audio/mixkit-greeting-music-box-tone-699.wav" type="audio/mp3">
+           </audio>
      </section>
      
 
